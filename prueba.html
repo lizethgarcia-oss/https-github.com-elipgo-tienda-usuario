@@ -1,0 +1,605 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tienda Elipgo</title>
+
+<style>
+
+:root{
+--azul:#293b8d;
+--azul2:#2667b1;
+--turquesa:#4ac4da;
+--fondo:#f5f7fb;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+
+body{
+background:var(--fondo);
+color:#333;
+}
+
+
+/* HEADER */
+
+header{
+
+background:white;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 10px #ddd;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+color:var(--azul);
+
+}
+
+
+nav a{
+
+text-decoration:none;
+margin:0 10px;
+color:var(--azul);
+
+}
+
+
+/* HERO */
+
+
+.hero{
+
+height:420px;
+
+background:
+linear-gradient(
+rgba(41,59,141,.75),
+rgba(38,103,177,.75)
+),
+url("https://images.unsplash.com/photo-1497366811353-6870744d04b2");
+
+background-size:cover;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+.hero p{
+
+margin-top:15px;
+font-size:20px;
+
+}
+
+
+
+/* TITULOS */
+
+
+.titulo{
+
+text-align:center;
+margin:50px 0 30px;
+
+color:var(--azul);
+
+}
+
+
+/* CATEGORIAS */
+
+
+.categorias{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+
+.categoria{
+
+background:white;
+padding:25px;
+
+width:200px;
+
+text-align:center;
+
+border-radius:15px;
+
+cursor:pointer;
+
+box-shadow:0 5px 15px #ddd;
+
+}
+
+
+
+.categoria:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+/* PRODUCTOS */
+
+
+.productos{
+
+display:flex;
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+padding:20px 50px;
+
+}
+
+
+.card{
+
+background:white;
+
+width:280px;
+
+border-radius:15px;
+
+padding:20px;
+
+box-shadow:0 5px 15px #ddd;
+
+}
+
+
+
+.card img{
+
+width:100%;
+height:180px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+
+
+.card h3{
+
+color:var(--azul);
+
+margin-top:15px;
+
+}
+
+
+
+.disponible{
+
+margin-top:10px;
+
+color:green;
+
+font-weight:bold;
+
+}
+
+
+
+button{
+
+margin-top:15px;
+
+width:100%;
+
+padding:12px;
+
+background:var(--azul2);
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+
+button:hover{
+
+background:var(--turquesa);
+
+}
+
+
+
+
+/* MIS COMPRAS */
+
+
+#compras{
+
+background:white;
+
+padding:40px;
+
+margin-top:50px;
+
+}
+
+
+.compra{
+
+padding:15px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+
+
+
+footer{
+
+background:var(--azul);
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+margin-top:40px;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Tienda Elipgo
+</div>
+
+
+<nav>
+
+<a href="#">Inicio</a>
+
+<a href="#catalogo">Catálogo</a>
+
+<a href="#compras">Mis compras</a>
+
+<a href="#">Contacto</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="hero">
+
+<div>
+
+<h1>
+Soluciones para tu espacio
+</h1>
+
+<p>
+Mobiliario corporativo y tecnología empresarial
+</p>
+
+
+</div>
+
+</section>
+
+
+
+
+<h2 class="titulo">
+Categorías
+</h2>
+
+
+<div class="categorias">
+
+
+<div class="categoria">
+🪑
+<br>
+Muebles
+</div>
+
+
+<div class="categoria">
+💺
+<br>
+Sillas
+</div>
+
+
+<div class="categoria">
+🖥️
+<br>
+Escritorios
+</div>
+
+
+<div class="categoria">
+📺
+<br>
+Pantallas
+</div>
+
+
+<div class="categoria">
+🛋️
+<br>
+Sillones
+</div>
+
+
+</div>
+
+
+
+
+
+<h2 class="titulo" id="catalogo">
+Catálogo
+</h2>
+
+
+
+<div class="productos">
+
+
+
+<div class="card">
+
+
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7">
+
+
+<h3>
+Silla Ejecutiva
+</h3>
+
+
+<p>
+Silla ergonómica para oficina.
+</p>
+
+
+<p class="disponible">
+Disponible:
+<span id="stock1">10</span>
+</p>
+
+
+<button onclick="comprar('Silla Ejecutiva',1)">
+Comprar
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd">
+
+
+<h3>
+Escritorio Ejecutivo
+</h3>
+
+
+<p>
+Escritorio corporativo premium.
+</p>
+
+
+<p class="disponible">
+Disponible:
+<span id="stock2">10</span>
+</p>
+
+
+<button onclick="comprar('Escritorio Ejecutivo',2)">
+Comprar
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174">
+
+
+<h3>
+Sillón Corporativo
+</h3>
+
+
+<p>
+Sillón para sala de espera.
+</p>
+
+
+<p class="disponible">
+Disponible:
+<span id="stock3">10</span>
+</p>
+
+
+<button onclick="comprar('Sillón Corporativo',3)">
+Comprar
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<section id="compras">
+
+
+<h2 class="titulo">
+Mis compras
+</h2>
+
+
+<div id="listaCompras">
+
+No tienes compras todavía.
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 Tienda Elipgo
+
+</footer>
+
+
+
+
+
+<script>
+
+
+function comprar(producto,id){
+
+
+let stock=document.getElementById("stock"+id);
+
+
+let cantidad=parseInt(stock.innerHTML);
+
+
+
+if(cantidad>0){
+
+
+cantidad--;
+
+
+stock.innerHTML=cantidad;
+
+
+
+let lista=document.getElementById("listaCompras");
+
+
+
+if(lista.innerHTML.includes("No tienes")){
+
+lista.innerHTML="";
+
+}
+
+
+
+lista.innerHTML +=
+
+"<div class='compra'>✔ "+producto+" comprado</div>";
+
+
+
+}
+
+
+else{
+
+alert("Producto agotado");
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
+```
